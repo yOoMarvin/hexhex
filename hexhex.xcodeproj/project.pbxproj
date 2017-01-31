@@ -54,14 +54,46 @@
 		58FA0ACF1E40EDAB00392754 /* hexhex */ = {
 			isa = PBXGroup;
 			children = (
+				58FA0AE51E40F29D00392754 /* resources */,
+				58FA0AE41E40F29300392754 /* controller */,
+				58FA0AE31E40F28F00392754 /* view */,
+				58FA0AE21E40F28800392754 /* model */,
 				58FA0AD01E40EDAB00392754 /* AppDelegate.swift */,
-				58FA0AD21E40EDAB00392754 /* ViewController.swift */,
+			);
+			path = hexhex;
+			sourceTree = "<group>";
+		};
+		58FA0AE21E40F28800392754 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		58FA0AE31E40F28F00392754 /* view */ = {
+			isa = PBXGroup;
+			children = (
 				58FA0AD41E40EDAB00392754 /* Main.storyboard */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		58FA0AE41E40F29300392754 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				58FA0AD21E40EDAB00392754 /* ViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		58FA0AE51E40F29D00392754 /* resources */ = {
+			isa = PBXGroup;
+			children = (
 				58FA0AD71E40EDAB00392754 /* Assets.xcassets */,
 				58FA0AD91E40EDAB00392754 /* LaunchScreen.storyboard */,
 				58FA0ADC1E40EDAB00392754 /* Info.plist */,
 			);
-			path = hexhex;
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
