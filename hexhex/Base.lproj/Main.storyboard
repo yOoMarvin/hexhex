@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="uhH-md-cCB">
-                                <rect key="frame" x="16" y="100" width="343" height="327"/>
+                                <rect key="frame" x="16" y="100" width="343" height="247"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="hex" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A8J-wz-Vg1">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="32"/>
@@ -39,17 +39,8 @@
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="rgb" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wZv-o7-3jk">
-                                        <rect key="frame" x="0.0" y="147.5" width="343" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="YFg-g6-hgR"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UIColor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOP-CU-uUX">
-                                        <rect key="frame" x="0.0" y="295" width="343" height="32"/>
+                                        <rect key="frame" x="0.0" y="215" width="343" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="wli-79-BQ3"/>
                                         </constraints>
@@ -69,7 +60,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uhH-md-cCB" firstAttribute="leading" secondItem="CWa-R0-oSI" secondAttribute="leadingMargin" id="2Oa-c4-3gT"/>
-                            <constraint firstItem="dZB-Es-bZz" firstAttribute="top" secondItem="uhH-md-cCB" secondAttribute="bottom" constant="240" id="5lG-nt-HDB"/>
+                            <constraint firstItem="dZB-Es-bZz" firstAttribute="top" secondItem="uhH-md-cCB" secondAttribute="bottom" constant="320" id="5lG-nt-HDB"/>
                             <constraint firstItem="uhH-md-cCB" firstAttribute="top" secondItem="cWQ-Ih-EU5" secondAttribute="bottom" constant="80" id="Rod-zk-4sz"/>
                             <constraint firstItem="uhH-md-cCB" firstAttribute="trailing" secondItem="CWa-R0-oSI" secondAttribute="trailingMargin" id="coF-33-9kp"/>
                             <constraint firstItem="3ty-Vt-zRY" firstAttribute="leading" secondItem="CWa-R0-oSI" secondAttribute="leadingMargin" id="jVc-BW-FWV"/>
