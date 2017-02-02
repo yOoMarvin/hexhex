@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hexhex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="hexhex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cWQ-Ih-EU5"/>
                         <viewControllerLayoutGuide type="bottom" id="dZB-Es-bZz"/>
@@ -67,6 +67,10 @@
                             <constraint firstItem="dZB-Es-bZz" firstAttribute="top" secondItem="3ty-Vt-zRY" secondAttribute="bottom" constant="8" id="r4c-t2-cy9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hexInput" destination="A8J-wz-Vg1" id="ni2-jA-pUM"/>
+                        <outlet property="uicolorInput" destination="cOP-CU-uUX" id="EqM-PV-oyr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
