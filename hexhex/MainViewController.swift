@@ -13,6 +13,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var hexInput: UITextField!
     @IBOutlet weak var uicolorInput: UITextField!
     
+    //Text change action
+    //-
+    //
     @IBAction func hexInputEditingChanged(_ sender: AnyObject) {
         print("hexInput: \(hexInput.text)")
         
@@ -25,9 +28,16 @@ class MainViewController: UIViewController {
         
         if hexString.characters.count > 5 {
             self.view.backgroundColor = color
+            guard let colorString = colorToString(uiColor: color!) else {
+                return
+            }
+            uicolorInput.text = colorString
         } else {
             self.view.backgroundColor = UIColor.white
+            uicolorInput.text = "UIColor(r:? ,g:? ,b:? ,a:?)"
         }
+        
+        
     }
     
     override func viewDidLoad() {

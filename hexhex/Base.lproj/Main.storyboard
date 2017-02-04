@@ -30,7 +30,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="uhH-md-cCB">
                                 <rect key="frame" x="16" y="100" width="343" height="247"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="hex" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A8J-wz-Vg1">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hex" borderStyle="roundedRect" placeholder="hex" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A8J-wz-Vg1">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="R38-Sv-Vhs"/>
@@ -42,7 +42,7 @@
                                             <action selector="hexInputEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="lma-28-qdq"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UIColor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOP-CU-uUX">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="UIColor(r:? ,g:? ,b:? ,a:?)" borderStyle="roundedRect" placeholder="UIColor" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOP-CU-uUX">
                                         <rect key="frame" x="0.0" y="215" width="343" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="wli-79-BQ3"/>

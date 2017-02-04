@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		58907F5F1E43970600D510C6 /* ColorConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58907F5E1E43970600D510C6 /* ColorConvert.swift */; };
+		58907F611E4635D300D510C6 /* ColorString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58907F601E4635D300D510C6 /* ColorString.swift */; };
 		58FA0AD11E40EDAB00392754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA0AD01E40EDAB00392754 /* AppDelegate.swift */; };
 		58FA0AD31E40EDAB00392754 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA0AD21E40EDAB00392754 /* MainViewController.swift */; };
 		58FA0AD61E40EDAB00392754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58FA0AD41E40EDAB00392754 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		58907F5E1E43970600D510C6 /* ColorConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorConvert.swift; sourceTree = "<group>"; };
+		58907F601E4635D300D510C6 /* ColorString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorString.swift; sourceTree = "<group>"; };
 		58FA0ACD1E40EDAB00392754 /* hexhex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hexhex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FA0AD01E40EDAB00392754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58FA0AD21E40EDAB00392754 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				58FA0AD21E40EDAB00392754 /* MainViewController.swift */,
 				58907F5E1E43970600D510C6 /* ColorConvert.swift */,
+				58907F601E4635D300D510C6 /* ColorString.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			files = (
 				58FA0AD31E40EDAB00392754 /* MainViewController.swift in Sources */,
 				58907F5F1E43970600D510C6 /* ColorConvert.swift in Sources */,
+				58907F611E4635D300D510C6 /* ColorString.swift in Sources */,
 				58FA0AD11E40EDAB00392754 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
