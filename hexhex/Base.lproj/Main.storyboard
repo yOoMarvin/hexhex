@@ -42,7 +42,7 @@
                                             <action selector="hexInputEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="lma-28-qdq"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="UIColor(r:? ,g:? ,b:? ,a:?)" borderStyle="roundedRect" placeholder="UIColor" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOP-CU-uUX">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="UIColor(red:? ,green:? ,blue:? ,alpha:?)" borderStyle="roundedRect" placeholder="UIColor" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOP-CU-uUX">
                                         <rect key="frame" x="0.0" y="215" width="343" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="wli-79-BQ3"/>
@@ -50,6 +50,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="uiColorInputEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="nma-Zb-Aj6"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
