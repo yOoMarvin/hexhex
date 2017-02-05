@@ -51,6 +51,9 @@
                                                 <state key="normal" title="Convert">
                                                     <color key="titleColor" red="0.82745098039999998" green="0.52549019610000003" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="hexToUIColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IHB-20-puU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -158,6 +161,9 @@
                                                 <state key="normal" title="Convert">
                                                     <color key="titleColor" red="0.82745098039999998" green="0.52549019610000003" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="uiColorToHexAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gpZ-Gr-hvz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -184,6 +190,13 @@
                             <constraint firstItem="vdR-NR-WXG" firstAttribute="top" secondItem="cWQ-Ih-EU5" secondAttribute="bottom" constant="32" id="zNI-MJ-evZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="alphaInput" destination="1Ix-7g-lLA" id="Kaz-Rm-CQi"/>
+                        <outlet property="blueInput" destination="Agr-jo-pB6" id="DeX-gZ-zqq"/>
+                        <outlet property="greenInput" destination="LeJ-Vj-uhF" id="3By-UN-8GA"/>
+                        <outlet property="hexInput" destination="tms-vo-ZLj" id="7uV-bw-qAh"/>
+                        <outlet property="redInput" destination="21S-nA-FyQ" id="LgG-pg-wac"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,31 +9,29 @@
 import Foundation
 import UIKit
 
-func colorToString(uiColor: UIColor) -> String? {
-    guard let components = uiColor.cgColor.components, components.count >= 3 else {
+
+func uiColorToString(withUIColor: UIColor) -> [String]? {
+    guard let components = withUIColor.cgColor.components, components.count >= 3 else {
+        print("No UIColor")
         return nil
     }
     
-    //extract colors
-    let r = String(format: "%.2f", Float(components[0]))
-    let g = String(format: "%.2f", Float(components[1]))
-    let b = String(format: "%.2f", Float(components[2]))
-    var a = String(format: "%.2f", Float(1.0))
+    //array vor colors values
+    var colors: [String] = []
     
-    //if there is an alpha value extract it too
-    if components.count >= 4 {
-        a = String(format: "%.2f", Float(components[3]))
+    //iterate through components array and append it to string color array
+    for component in components {
+        colors.append(String(format: "%.2f", Float(component)))
     }
     
-    //build the string
-    let result = "UIColor(red:0\(r), green:\(g), blue:\(b), alpha:\(a))"
-    
-    return result
-
+    return colors
 }
 
 
-func stringToColor(withString: String) -> UIColor? {
+
+
+
+func stringToUIColor(withString: String) -> UIColor? {
     //String like this: UIColor(red:1.0, green:1.0, blue:1.0, alpha:1.0)
     
     var colorArray = withString.components(separatedBy: ":")
