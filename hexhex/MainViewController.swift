@@ -10,12 +10,12 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var hexInput: UITextField!
-    @IBOutlet weak var uicolorInput: UITextField!
+    
     
     //Text change action
     //-
     // hex to UIColor
+    /*
     @IBAction func hexInputEditingChanged(_ sender: AnyObject) {
         
         guard let hexString = hexInput.text else {
@@ -61,7 +61,7 @@ class MainViewController: UIViewController {
         hexInput.text = hexString
         
     }
-    
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
