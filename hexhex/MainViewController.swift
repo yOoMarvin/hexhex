@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var alphaInput: UITextField!
     
     @IBAction func hexToUIColorAction(_ sender: Any) {
+        
         guard let hexString = hexInput.text else {
             print("no hex input")
             self.view.backgroundColor = UIColor.white
@@ -29,6 +30,11 @@ class MainViewController: UIViewController {
         guard let color = UIColor(hex: hexString) else {
             print("cannot build the uicolor with this string: \(hexString)")
             self.view.backgroundColor = UIColor.white
+            //reset values
+            redInput.text = ""
+            greenInput.text = ""
+            blueInput.text = ""
+            alphaInput.text = "1.00"
             return
         }
         
@@ -65,6 +71,9 @@ class MainViewController: UIViewController {
         
         guard let color = stringArrayToUIColor(withColorStringArray: colors) else{
             print("no ui color")
+            //reset background and value of hexInput
+            self.view.backgroundColor = UIColor.white
+            hexInput.text = ""
             return
         }
         
