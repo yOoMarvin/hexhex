@@ -31,12 +31,13 @@ func uiColorToString(withUIColor: UIColor) -> [String]? {
 
 
 
-func stringArrayToUIColor(withColorStringArray: [String]) -> UIColor? {
-    //String like this: UIColor(red:1.0, green:1.0, blue:1.0, alpha:1.0)
-    
+func stringArrayToUIColor(withColorStringArray: [String]) -> UIColor? {    
     var colorValueArray: [Float] = []
     
     for color in withColorStringArray {
+        guard color != "" else {
+            return nil
+        }
         colorValueArray.append(Float(color)!)
     }
     
