@@ -52,6 +52,45 @@ class MainViewController: UIViewController {
     
     
     @IBAction func uiColorToHexAction(_ sender: Any) {
+        let fields = [redInput, greenInput, blueInput, alphaInput]
+        var colors: [String] = []
+        
+        for field in fields {
+            guard let color = field?.text else {
+                print("input field empty?")
+                return
+            }
+            colors.append(color)
+        }
+        
+        guard let color = stringArrayToUIColor(withColorStringArray: colors) else{
+            print("no ui color")
+            return
+        }
+        
+        self.view.backgroundColor = color
+        
+        
+        if colors[3] == "1.0" {
+            guard let hexString = color.hexString() else {
+                print("cannot create hex string")
+                return
+            }
+            hexInput.text = hexString
+
+        }else{
+            guard let hexString = color.hexString(alpha: true) else {
+                print("cannot create hex string")
+                return
+            }
+            hexInput.text = hexString
+
+        }
+        
+        
+        
+        
+        
     }
     
 }

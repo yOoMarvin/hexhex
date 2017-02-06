@@ -70,7 +70,6 @@
 				58FA0AE41E40F29300392754 /* controller */,
 				58FA0AE31E40F28F00392754 /* view */,
 				58FA0AE21E40F28800392754 /* model */,
-				58FA0AD01E40EDAB00392754 /* AppDelegate.swift */,
 			);
 			path = hexhex;
 			sourceTree = "<group>";
@@ -78,6 +77,7 @@
 		58FA0AE21E40F28800392754 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				58FA0AD01E40EDAB00392754 /* AppDelegate.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";

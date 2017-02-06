@@ -31,22 +31,18 @@ func uiColorToString(withUIColor: UIColor) -> [String]? {
 
 
 
-func stringToUIColor(withString: String) -> UIColor? {
+func stringArrayToUIColor(withColorStringArray: [String]) -> UIColor? {
     //String like this: UIColor(red:1.0, green:1.0, blue:1.0, alpha:1.0)
     
-    var colorArray = withString.components(separatedBy: ":")
-    print(colorArray)
-    let r = Float(colorArray[1].components(separatedBy: ",")[0])
-    let g = Float(colorArray[2].components(separatedBy: ",")[0])
-    let b = Float(colorArray[3].components(separatedBy: ",")[0])
-    let a = Float(colorArray[4].components(separatedBy: ")")[0])
+    var colorValueArray: [Float] = []
     
+    for color in withColorStringArray {
+        colorValueArray.append(Float(color)!)
+    }
     
-    if (r != nil),(g != nil),(b != nil),(a != nil) {
-        return UIColor(red: CGFloat(r!), green: CGFloat(g!), blue: CGFloat(b!), alpha: CGFloat(a!))
-    }
-    else{
-        return nil
-    }
+    let result = UIColor(red: CGFloat(colorValueArray[0]), green: CGFloat(colorValueArray[1]), blue: CGFloat(colorValueArray[2]), alpha: CGFloat(colorValueArray[3]))
 
+    return result
+    
+    
 }
