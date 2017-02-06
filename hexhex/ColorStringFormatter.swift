@@ -38,7 +38,10 @@ func stringArrayToUIColor(withColorStringArray: [String]) -> UIColor? {
         guard color != "" else {
             return nil
         }
-        colorValueArray.append(Float(color)!)
+        guard let colorValue = Float(color) else {
+            return nil
+        }
+        colorValueArray.append(colorValue)
     }
     
     let result = UIColor(red: CGFloat(colorValueArray[0]), green: CGFloat(colorValueArray[1]), blue: CGFloat(colorValueArray[2]), alpha: CGFloat(colorValueArray[3]))
