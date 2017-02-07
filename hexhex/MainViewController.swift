@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
     func resetHexInputAndBackground() {
         hexInput.text = ""
         self.view.backgroundColor = UIColor.white
-        checkColor(withUIColor: UIColor.white)
+        checkColor(withUIColor: UIColor(hex: "FFFFFF")!)
     }
     
     func resetUIColorInputsAndBackground() {
@@ -41,8 +41,7 @@ class MainViewController: UIViewController {
         blueInput.text = ""
         alphaInput.text = "1.00"
         self.view.backgroundColor = UIColor.white
-        checkColor(withUIColor: UIColor.white)
-
+        checkColor(withUIColor: UIColor(hex: "FFFFFF")!)
     }
     
     
@@ -157,12 +156,10 @@ class MainViewController: UIViewController {
             hexInput.text = hexString
 
         }
-        
-        
     }
     
-
-    
-    
+    @IBAction func userTappedBackground(sender: AnyObject) {
+        view.endEditing(true)
+    }
 }
 
