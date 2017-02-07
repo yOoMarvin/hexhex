@@ -10,10 +10,29 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    //MARK: - Outlets
+    @IBOutlet weak var hexLabel: UILabel!
+    @IBOutlet weak var uiColorLabel: UILabel!
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var greenLabel: UILabel!
+    @IBOutlet weak var blueLabel: UILabel!
+    @IBOutlet weak var alphaLabel: UILabel!
+    @IBOutlet weak var hexhexLabel: UILabel!
+    
+    @IBOutlet weak var hexInput: UITextField!
+    
+    @IBOutlet weak var redInput: UITextField!
+    @IBOutlet weak var greenInput: UITextField!
+    @IBOutlet weak var blueInput: UITextField!
+    @IBOutlet weak var alphaInput: UITextField!
+    
+    
+    
     //MARK: - Help Methods for resetting values and background
     func resetHexInputAndBackground() {
         hexInput.text = ""
         self.view.backgroundColor = UIColor.white
+        checkColor(withUIColor: UIColor.white)
     }
     
     func resetUIColorInputsAndBackground() {
@@ -22,6 +41,7 @@ class MainViewController: UIViewController {
         blueInput.text = ""
         alphaInput.text = "1.00"
         self.view.backgroundColor = UIColor.white
+        checkColor(withUIColor: UIColor.white)
 
     }
     
@@ -29,6 +49,8 @@ class MainViewController: UIViewController {
     //MARK: - Help function for checking if a color is bright or dark
     //      - Update font colors
     func checkColor(withUIColor: UIColor) {
+        let labels = [hexLabel, uiColorLabel, redLabel, greenLabel, blueLabel, alphaLabel, hexhexLabel]
+        
         let components = withUIColor.cgColor.components
         let componentColorOne: CGFloat = components![0]
         let componentColorTwo: CGFloat = components![1]
@@ -37,21 +59,17 @@ class MainViewController: UIViewController {
         
         if brightness < 500 {
             print("background is dark. Brightness value is \(brightness)")
+            for label in labels {
+                label?.textColor = UIColor.white
+            }
         }else {
             print("background is bright. Brightness value is \(brightness)")
+            for label in labels {
+                label?.textColor = UIColor(hex: "282828")
+            }
         }
     }
 
-    
-    
-    //MARK: - Outlets & Actions
-    
-    @IBOutlet weak var hexInput: UITextField!
-    
-    @IBOutlet weak var redInput: UITextField!
-    @IBOutlet weak var greenInput: UITextField!
-    @IBOutlet weak var blueInput: UITextField!
-    @IBOutlet weak var alphaInput: UITextField!
     
     //MARK: - Button action. Convert from HEX to UIColor
     @IBAction func hexToUIColorAction(_ sender: Any) {
@@ -70,7 +88,7 @@ class MainViewController: UIViewController {
         }
         
         //at this point UIColor Object was created successfully
-        //set background color to the color
+        //set background color to the color and check if color is bright or dark (see function)
         self.view.backgroundColor = color
         checkColor(withUIColor: color)
         
@@ -114,8 +132,10 @@ class MainViewController: UIViewController {
         }
         
         //at this point a uicolor object was created
-        //fill background with the color
+        //fill background with the color and check if color is bright or dark (see function)
         self.view.backgroundColor = color
+        checkColor(withUIColor: color)
+
         
         //check the alpha value and call method with or without the parameter
         if colorStringArray[3] == "1.0" {
@@ -147,7 +167,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        
+        /*
         let fields = [hexInput, redInput, greenInput, blueInput,alphaInput]
         
         for field in fields {
@@ -159,7 +179,7 @@ class MainViewController: UIViewController {
         }
         //MARK: - Border styles for input fields
         
-
+        */
         
     }
     

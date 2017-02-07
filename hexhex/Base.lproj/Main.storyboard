@@ -192,10 +192,17 @@
                     </view>
                     <connections>
                         <outlet property="alphaInput" destination="1Ix-7g-lLA" id="Kaz-Rm-CQi"/>
+                        <outlet property="alphaLabel" destination="l4I-uv-fUK" id="zjR-yL-y2W"/>
                         <outlet property="blueInput" destination="Agr-jo-pB6" id="DeX-gZ-zqq"/>
+                        <outlet property="blueLabel" destination="QBJ-cZ-Ss3" id="KFO-ZC-crV"/>
                         <outlet property="greenInput" destination="LeJ-Vj-uhF" id="3By-UN-8GA"/>
+                        <outlet property="greenLabel" destination="W9m-bz-0TP" id="8xh-ii-C1F"/>
                         <outlet property="hexInput" destination="tms-vo-ZLj" id="7uV-bw-qAh"/>
+                        <outlet property="hexLabel" destination="A3V-iU-ykP" id="dyt-go-tVO"/>
+                        <outlet property="hexhexLabel" destination="3ty-Vt-zRY" id="u6G-oe-nPs"/>
                         <outlet property="redInput" destination="21S-nA-FyQ" id="LgG-pg-wac"/>
+                        <outlet property="redLabel" destination="f0A-XB-hLS" id="TyU-Qr-yAr"/>
+                        <outlet property="uiColorLabel" destination="4yr-bg-iQj" id="8yg-Rm-3Pc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
