@@ -24,6 +24,23 @@ class MainViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
 
     }
+    
+    
+    //MARK: - Help function for checking if a color is bright or dark
+    //      - Update font colors
+    func checkColor(withUIColor: UIColor) {
+        let components = withUIColor.cgColor.components
+        let componentColorOne: CGFloat = components![0]
+        let componentColorTwo: CGFloat = components![1]
+        let componentColorThree: CGFloat = components![2]
+        let brightness = ((componentColorOne * 299) + (componentColorTwo * 587) + (componentColorThree * 114))
+        
+        if brightness < 500 {
+            print("background is dark. Brightness value is \(brightness)")
+        }else {
+            print("background is bright. Brightness value is \(brightness)")
+        }
+    }
 
     
     
@@ -55,6 +72,7 @@ class MainViewController: UIViewController {
         //at this point UIColor Object was created successfully
         //set background color to the color
         self.view.backgroundColor = color
+        checkColor(withUIColor: color)
         
         //create an String Array with values for the input fields
         guard let colorStringArray = uiColorToString(withUIColor: color) else {
