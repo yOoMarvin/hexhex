@@ -121,10 +121,31 @@ class MainViewController: UIViewController {
         }
         
         
+    }
+    
+    
+    
+    
+    
+    override func viewDidLoad(){
+        super.viewDidLoad()
         
+        let fields = [hexInput, redInput, greenInput, blueInput,alphaInput]
         
+        for field in fields {
+            let bottomLine = CALayer()
+            bottomLine.frame = CGRect(x:0.0, y:(field?.frame.height)! - 0.1, width:(field?.frame.width)!, height:0.4)
+            bottomLine.backgroundColor = UIColor(hex: "282828")?.cgColor
+            field?.borderStyle = UITextBorderStyle.none
+            field?.layer.addSublayer(bottomLine)
+        }
+        //MARK: - Border styles for input fields
+        
+
         
     }
+    
+    
     
 }
 
