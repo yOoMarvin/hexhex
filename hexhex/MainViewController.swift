@@ -28,9 +28,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var convertHexToUIColorButton: UIButton!
     @IBOutlet weak var convertUIColorToHexButton: UIButton!
-    
-    
    
+    
     
     //MARK: - Button action. Convert from HEX to UIColor
     @IBAction func hexToUIColorAction(_ sender: Any) {
