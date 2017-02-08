@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58907F5F1E43970600D510C6 /* ColorConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58907F5E1E43970600D510C6 /* ColorConvert.swift */; };
+		58907F5F1E43970600D510C6 /* ColorConverterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58907F5E1E43970600D510C6 /* ColorConverterExtension.swift */; };
 		58907F611E4635D300D510C6 /* ColorStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58907F601E4635D300D510C6 /* ColorStringFormatter.swift */; };
 		58FA0AD11E40EDAB00392754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA0AD01E40EDAB00392754 /* AppDelegate.swift */; };
 		58FA0AD31E40EDAB00392754 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA0AD21E40EDAB00392754 /* MainViewController.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		58907F5E1E43970600D510C6 /* ColorConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorConvert.swift; sourceTree = "<group>"; };
+		58907F5E1E43970600D510C6 /* ColorConverterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorConverterExtension.swift; sourceTree = "<group>"; };
 		58907F601E4635D300D510C6 /* ColorStringFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStringFormatter.swift; sourceTree = "<group>"; };
 		58FA0ACD1E40EDAB00392754 /* hexhex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hexhex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FA0AD01E40EDAB00392754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				58FA0AD21E40EDAB00392754 /* MainViewController.swift */,
-				58907F5E1E43970600D510C6 /* ColorConvert.swift */,
+				58907F5E1E43970600D510C6 /* ColorConverterExtension.swift */,
 				58907F601E4635D300D510C6 /* ColorStringFormatter.swift */,
 			);
 			name = controller;
@@ -192,7 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58FA0AD31E40EDAB00392754 /* MainViewController.swift in Sources */,
-				58907F5F1E43970600D510C6 /* ColorConvert.swift in Sources */,
+				58907F5F1E43970600D510C6 /* ColorConverterExtension.swift in Sources */,
 				58907F611E4635D300D510C6 /* ColorStringFormatter.swift in Sources */,
 				58FA0AD11E40EDAB00392754 /* AppDelegate.swift in Sources */,
 			);
