@@ -26,6 +26,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var blueInput: UITextField!
     @IBOutlet weak var alphaInput: UITextField!
     
+    @IBOutlet weak var convertHexToUIColorButton: UIButton!
+    @IBOutlet weak var convertUIColorToHexButton: UIButton!
     
     
     //MARK: - Help Methods for resetting values and background
@@ -87,9 +89,13 @@ class MainViewController: UIViewController {
         }
         
         //at this point UIColor Object was created successfully
-        //set background color to the color and check if color is bright or dark (see function)
+        //set background color to the color
+        //check if color is bright or dark (see function)
+        //change color of button to inverse color of background
         self.view.backgroundColor = color
         checkColor(withUIColor: color)
+        convertHexToUIColorButton.setTitleColor(color.inverse(), for: UIControlState.normal)
+        convertUIColorToHexButton.setTitleColor(color.inverse(), for: UIControlState.normal)
         
         //create an String Array with values for the input fields
         guard let colorStringArray = uiColorToString(withUIColor: color) else {
@@ -131,9 +137,13 @@ class MainViewController: UIViewController {
         }
         
         //at this point a uicolor object was created
-        //fill background with the color and check if color is bright or dark (see function)
+        //fill background with the color
+        //check if color is bright or dark (see function)
+        //change color of button to inverse color of background
         self.view.backgroundColor = color
         checkColor(withUIColor: color)
+        convertHexToUIColorButton.setTitleColor(color.inverse(), for: UIControlState.normal)
+        convertUIColorToHexButton.setTitleColor(color.inverse(), for: UIControlState.normal)
 
         
         //check the alpha value and call method with or without the parameter
