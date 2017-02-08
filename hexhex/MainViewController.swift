@@ -30,51 +30,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var convertUIColorToHexButton: UIButton!
     
     
-    //MARK: - Help Methods for resetting values and background
-    func resetHexInputAndBackground() {
-        hexInput.text = ""
-        self.view.backgroundColor = UIColor.white
-        checkColor(withUIColor: UIColor(hex: "FFFFFF")!)
-        convertUIColorToHexButton.setTitleColor(UIColor(hex: "007AFF")!, for: UIControlState.normal)
-        convertHexToUIColorButton.setTitleColor(UIColor(hex: "007AFF")!, for: UIControlState.normal)
-    }
-    
-    func resetUIColorInputsAndBackground() {
-        redInput.text = ""
-        greenInput.text = ""
-        blueInput.text = ""
-        alphaInput.text = "1.00"
-        self.view.backgroundColor = UIColor.white
-        checkColor(withUIColor: UIColor(hex: "FFFFFF")!)
-        convertUIColorToHexButton.setTitleColor(UIColor(hex: "007AFF")!, for: UIControlState.normal)
-        convertHexToUIColorButton.setTitleColor(UIColor(hex: "007AFF")!, for: UIControlState.normal)
-    }
-    
-    
-    //MARK: - Help function for checking if a color is bright or dark
-    //      - Update font colors
-    func checkColor(withUIColor: UIColor) {
-        let labels = [hexLabel, uiColorLabel, redLabel, greenLabel, blueLabel, alphaLabel, hexhexLabel]
-        
-        let components = withUIColor.cgColor.components
-        let componentColorOne: CGFloat = components![0]
-        let componentColorTwo: CGFloat = components![1]
-        let componentColorThree: CGFloat = components![2]
-        let brightness = ((componentColorOne * 299) + (componentColorTwo * 587) + (componentColorThree * 114))
-        
-        if brightness < 500 {
-            print("background is dark. Brightness value is \(brightness)")
-            for label in labels {
-                label?.textColor = UIColor.white
-            }
-        }else {
-            print("background is bright. Brightness value is \(brightness)")
-            for label in labels {
-                label?.textColor = UIColor(hex: "282828")
-            }
-        }
-    }
-
+   
     
     //MARK: - Button action. Convert from HEX to UIColor
     @IBAction func hexToUIColorAction(_ sender: Any) {
@@ -115,6 +71,11 @@ class MainViewController: UIViewController {
             alphaInput.text = colorStringArray[3]
         }
     }
+    
+    
+    
+    
+    
     
     
     
@@ -172,6 +133,64 @@ class MainViewController: UIViewController {
         }
     }
     
+    
+    
+    //-----------------------
+    // MARK: - HELP FUNCTIONS
+    //-----------------------
+    
+    
+    
+    //MARK: - Help Methods for resetting values and background
+    func resetHexInputAndBackground() {
+        hexInput.text = ""
+        self.view.backgroundColor = UIColor.white
+        checkColor(withUIColor: UIColor(hex: "FFFFFF")!)
+        convertUIColorToHexButton.setTitleColor(UIColor(hex: "007AFF")!, for: UIControlState.normal)
+        convertHexToUIColorButton.setTitleColor(UIColor(hex: "007AFF")!, for: UIControlState.normal)
+    }
+    
+    func resetUIColorInputsAndBackground() {
+        redInput.text = ""
+        greenInput.text = ""
+        blueInput.text = ""
+        alphaInput.text = "1.00"
+        self.view.backgroundColor = UIColor.white
+        checkColor(withUIColor: UIColor(hex: "FFFFFF")!)
+        convertUIColorToHexButton.setTitleColor(UIColor(hex: "007AFF")!, for: UIControlState.normal)
+        convertHexToUIColorButton.setTitleColor(UIColor(hex: "007AFF")!, for: UIControlState.normal)
+    }
+    
+    
+    //MARK: - Help function for checking if a color is bright or dark
+    //      - Update font colors
+    func checkColor(withUIColor: UIColor) {
+        let labels = [hexLabel, uiColorLabel, redLabel, greenLabel, blueLabel, alphaLabel, hexhexLabel]
+        
+        let components = withUIColor.cgColor.components
+        let componentColorOne: CGFloat = components![0]
+        let componentColorTwo: CGFloat = components![1]
+        let componentColorThree: CGFloat = components![2]
+        let brightness = ((componentColorOne * 299) + (componentColorTwo * 587) + (componentColorThree * 114))
+        
+        if brightness < 500 {
+            print("background is dark. Brightness value is \(brightness)")
+            for label in labels {
+                label?.textColor = UIColor.white
+            }
+        }else {
+            print("background is bright. Brightness value is \(brightness)")
+            for label in labels {
+                label?.textColor = UIColor(hex: "282828")
+            }
+        }
+    }
+
+    
+    
+    
+    
+    // MARK: - Hide Keyboard when user taps background of view
     @IBAction func userTappedBackground(sender: AnyObject) {
         view.endEditing(true)
     }
