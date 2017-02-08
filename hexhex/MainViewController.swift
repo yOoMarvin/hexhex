@@ -35,6 +35,8 @@ class MainViewController: UIViewController {
         hexInput.text = ""
         self.view.backgroundColor = UIColor.white
         checkColor(withUIColor: UIColor(hex: "FFFFFF")!)
+        convertUIColorToHexButton.setTitleColor(UIColor(hex: "007AFF")!, for: UIControlState.normal)
+        convertHexToUIColorButton.setTitleColor(UIColor(hex: "007AFF")!, for: UIControlState.normal)
     }
     
     func resetUIColorInputsAndBackground() {
@@ -44,6 +46,8 @@ class MainViewController: UIViewController {
         alphaInput.text = "1.00"
         self.view.backgroundColor = UIColor.white
         checkColor(withUIColor: UIColor(hex: "FFFFFF")!)
+        convertUIColorToHexButton.setTitleColor(UIColor(hex: "007AFF")!, for: UIControlState.normal)
+        convertHexToUIColorButton.setTitleColor(UIColor(hex: "007AFF")!, for: UIControlState.normal)
     }
     
     

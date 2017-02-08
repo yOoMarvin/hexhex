@@ -48,7 +48,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zht-3M-39F">
                                                 <rect key="frame" x="0.0" y="84" width="279" height="37"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="20"/>
-                                                <state key="normal" title="Convert"/>
+                                                <state key="normal" title="Convert">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="hexToUIColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IHB-20-puU"/>
                                                 </connections>
